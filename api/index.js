@@ -11,6 +11,8 @@ api.use(express.json({ extended: true }));
 
 api.get('/', (req, res) => res.send('Hello Back End'));
 
+api.use('/api/v1', require('../routers'));
+
 api.use(errors());
 
 module.exports = { api, PORT };

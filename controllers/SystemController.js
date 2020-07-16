@@ -1,5 +1,4 @@
 const { SystemService } = require('../services');
-const System = require('../models/Sistema');
 module.exports = {
     insert: async (req, res) => {
         try {

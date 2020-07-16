@@ -8,7 +8,7 @@ const config = {
     MONGO_URI: `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cintanegra-shard-00-00-wefnp.mongodb.net:27017,cintanegra-shard-00-01-wefnp.mongodb.net:27017,cintanegra-shard-00-02-wefnp.mongodb.net:27017/stagin?ssl=true&replicaSet=CintaNegra-shard-0&authSource=admin&retryWrites=true&w=majority`,
   },
   TEST: {
-    MONGO_URI: `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cintanegra-shard-00-00-wefnp.mongodb.net:27017,cintanegra-shard-00-01-wefnp.mongodb.net:27017,cintanegra-shard-00-02-wefnp.mongodb.net:27017/test?ssl=true&replicaSet=CintaNegra-shard-0&authSource=admin&retryWrites=true&w=majority`,
+    MONGO_URI: `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cintanegra-shard-00-00-wefnp.mongodb.net:27017,cintanegra-shard-00-01-wefnp.mongodb.net:27017,cintanegra-shard-00-02-wefnp.mongodb.net:27017/final?ssl=true&replicaSet=CintaNegra-shard-0&authSource=admin&retryWrites=true&w=majority`,
   },
 };
 // eslint-disable-next-line no-console

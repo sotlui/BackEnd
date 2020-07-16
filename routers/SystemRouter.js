@@ -3,8 +3,20 @@ const router = express.Router();
 
 const { SystemValidator } = require('../validators');
 const { SystemController } = require('../controllers');
-const { verifyToken } = require('../middlewares');
 
 router.post('/systems',
-    verifyToken,
     SystemValidator.create, SystemController.insert);
+
+router.get('/systems',
+    SystemController.findAll);
+
+router.get('/systems/:id',
+    SystemValidator.findOneById, SystemController.findOneById);
+
+router.patch('/systems/:id',
+    SystemValidator.updateOne, SystemController.updateOne);
+
+router.delete('/systems/:id',
+    SystemValidator.deleteOne, SystemController.deleteOne);
+
+module.exports = router;

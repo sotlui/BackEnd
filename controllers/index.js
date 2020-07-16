@@ -1,4 +1,4 @@
-const { SystemController } = require('./SystemController');
+const  SystemController  = require('./SystemController');
 
 module.exports = {
     SystemController,

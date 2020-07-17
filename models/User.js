@@ -27,6 +27,7 @@ const userSchema = new Schema({
     system: [{
         type: mongoose.Types.ObjectId,
         ref: 'System',
+        require:true,
     }],
 }, { timestamps: true, versionKey: false });
 

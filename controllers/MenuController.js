@@ -2,7 +2,7 @@ const { MenuService } = require('../services');
 
 module.exports = {
     insert: async (req, res) => {
-        const { men_name } = req.body;
+        const { men_name } = req.body;       
         try {
             const menExists = await MenuService.findOneName(men_name);
             if (menExists) res.status(400).json({ message: 'Menu already taken' });

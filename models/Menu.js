@@ -26,7 +26,8 @@ const menuSchema = new Schema({
         type: Boolean,
         default: true,
     },
-}, { timestamps: true, versionKey: true });
+}, { timestamps: true, versionKey: false });
 
 const Menu = mongoose.model('Menu', menuSchema, 'Menus');
+
 module.exports = Menu;

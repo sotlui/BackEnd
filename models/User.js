@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const { systemSchema } = require('./Sistema');
 
 const SALT_WORK_FACTOR = 10;
+
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
@@ -24,7 +24,10 @@ const userSchema = new Schema({
         type: Boolean,
         default: true,
     },
-    system: [systemSchema],
+    system: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'System',
+    }],
 }, { timestamps: true, versionKey: false });
 
 

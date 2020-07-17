@@ -14,9 +14,14 @@ const systemSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-    }
+    },
+     permissions: {
+        type: String,
+        enum: ['PUBLIC', 'PRIVATE'],
+        default: 'PUBLIC',
+    }, 
 }, { timestamps: true, versionKey: false });
 
 const System = mongoose.model('System', systemSchema, 'Systems');
 
-module.exports = System;
+module.exports = { System, systemSchema };
